@@ -1,6 +1,6 @@
 class Tasks < Netzke::Basepack::Grid
-  def configure(c)
-    super
+    
+  def configure(c)    
     c.model = "Task"
     c.columns = [
     	:done,
@@ -10,5 +10,9 @@ class Tasks < Netzke::Basepack::Grid
     	{ name: :due, header: "Due on"}
     ]
     c.scope = {done: [nil, false] }
+
+    super
+
   end
+
 end
